@@ -39,22 +39,29 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     // step -1 : get withdraw balance as input .value
     const withdrawField = document.getElementById('withdraw-input');
     const newWithdrawAmount = withdrawField.value;
+    if (isNaN(newWithdrawAmount)) {
+        alert('Please provide a valid number')
+    }
+    withdrawField.value = "";
     // step -2: get withdraw balance as innerText
     const withdrawTotalElement = document.getElementById('withdraw-balance');
     const previousWithdrawTotal = withdrawTotalElement.innerText;
     // step -3:
-    const currentWithdrawTotal = parseFloat(newWithdrawAmount) + parseFloat(previousWithdrawTotal);
-
-    withdrawTotalElement.innerText = currentWithdrawTotal;
+    
     // step -4:
     const balanceTotalElement = document.getElementById('balance-total');
     const previousBalanceTotal = parseFloat(balanceTotalElement.innerText);
-
+    if (newWithdrawAmount > previousBalanceTotal) {
+        alert('You have not enough Taka');
+        return;
+    }
+    const currentWithdrawTotal = parseFloat(newWithdrawAmount) + parseFloat(previousWithdrawTotal);
+    withdrawTotalElement.innerText = currentWithdrawTotal;
     // step -5:
     const currentBalanceTotal = previousBalanceTotal - parseFloat(newWithdrawAmount);
     // set the balance total
     balanceTotalElement.innerText = currentBalanceTotal;
 
     // input field clear 
-    withdrawField.value = "";
+    
 })
