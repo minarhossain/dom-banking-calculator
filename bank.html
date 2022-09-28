@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Money</title>
+    <style>
+        .container {
+            width: 1140px;
+            margin: 0 auto;
+            background-color: rgb(244, 186, 186);
+            height: 80vh;
+        }
+
+        .dwb-wrapper {
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dwb-wrapper>div {
+            text-align: center;
+            width: 320px;
+            height: 170px;
+            background-color: rgb(134, 54, 210);
+            margin: 30px;
+            border-radius: 10px;
+
+        }
+
+        h5 {
+            font-size: 20px;
+            color: rgb(222, 227, 232);
+            margin-bottom: 0px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: aliceblue;
+        }
+
+        .deposit-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .deposit-container>div {
+            text-align: center;
+            width: 450px;
+            height: 180px;
+            background-color: rgb(126, 245, 105);
+            margin: 30px;
+            border-radius: 10px;
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border:none;
+        }
+        button{
+            padding: 10px 30px;
+            background: blue;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius:5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1 style="text-align:center;">This my Bank Page for calculation</h1>
+        <section>
+            <div class="dwb-wrapper">
+
+                <div>
+                    <h5>Deposit</h5>
+                    <h1>$<span id="deposit-balance">12</span></h1>
+                </div>
+
+                <div>
+                    <h5>Withdraw</h5>
+                    <h1>$<span id="withdraw-balance">00</span> </h1>
+                </div>
+
+                <div>
+                    <h5>Balance</h5>
+                    <h1>$<span id="balance-total">1240</span></h1>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Deposit 
+        Section -->
+        <section>
+            <div class="deposit-container">
+                <div>
+                    <h2>Please Deposit</h2>
+                    <input id="deposit-input" type="text" placeholder="$ amount you want to deposit"> <br>
+                    <button id="btn-deposit">Deposit</button>
+                </div>
+
+                <div>
+                    <h2>Please Withdraw</h2>
+                    <input id="withdraw-input" type="text" placeholder="$ amount you want to withdraw"> <br>
+                    <button id="btn-withdraw">Withdraw</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+<script src="bank.js"></script>
+<script>
+   
+</script>
+</body>
+
+</html>
